@@ -10,10 +10,10 @@ import static java.lang.System.*;
 
 public class NumberShifterRunner
 {
-	public static void main( String args[] ) throws IOException
-	{
-		//add test cases
-	}
+  public static void main( String args[] ) throws IOException
+  {
+    //add test cases
+  }
 }
 
 
