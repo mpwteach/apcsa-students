@@ -102,10 +102,10 @@ public class CardGameGUI extends JFrame implements ActionListener
     for (int i = 0; i < cardCoords.length; i++) {
       cardCoords[i] = new Point(x, y);
       if (i % 5 == 4) {
-	x = LAYOUT_LEFT;
-	y += LAYOUT_HEIGHT_INC;
+        x = LAYOUT_LEFT;
+        y += LAYOUT_HEIGHT_INC;
       } else {
-	x += LAYOUT_WIDTH_INC;
+        x += LAYOUT_WIDTH_INC;
       }
     }
 
@@ -122,7 +122,7 @@ public class CardGameGUI extends JFrame implements ActionListener
   {
     java.awt.EventQueue.invokeLater(new Runnable() {
       public void run() {
-	setVisible(true);
+        setVisible(true);
       }
     });
   }
@@ -134,22 +134,22 @@ public class CardGameGUI extends JFrame implements ActionListener
   {
     for (int k = 0; k < board.size(); k++) {
       String cardImageFileName =
-	imageFileName(board.cardAt(k), selections[k]);
+        imageFileName(board.cardAt(k), selections[k]);
       URL imageURL = getClass().getResource(cardImageFileName);
       if (imageURL != null) {
-	ImageIcon icon = new ImageIcon(imageURL);
-	displayCards[k].setIcon(icon);
-	displayCards[k].setVisible(true);
+        ImageIcon icon = new ImageIcon(imageURL);
+        displayCards[k].setIcon(icon);
+        displayCards[k].setVisible(true);
       } else {
-	throw new RuntimeException(
-	  "Card image not found: \"" + cardImageFileName + "\"");
+        throw new RuntimeException(
+          "Card image not found: \"" + cardImageFileName + "\"");
       }
     }
     statusMsg.setText(board.deckSize()
-		      + " undealt cards remain.");
+                      + " undealt cards remain.");
     statusMsg.setVisible(true);
     totalsMsg.setText("You've won " + totalWins
-		      + " out of " + totalGames + " games.");
+                      + " out of " + totalGames + " games.");
     totalsMsg.setVisible(true);
     pack();
     panel.repaint();
@@ -162,7 +162,7 @@ public class CardGameGUI extends JFrame implements ActionListener
   {
     panel = new JPanel() {
       public void paintComponent(Graphics g) {
-	super.paintComponent(g);
+        super.paintComponent(g);
       }
     };
 
@@ -194,7 +194,7 @@ public class CardGameGUI extends JFrame implements ActionListener
       displayCards[k] = new JLabel();
       panel.add(displayCards[k]);
       displayCards[k].setBounds(cardCoords[k].x, cardCoords[k].y,
-				CARD_WIDTH, CARD_HEIGHT);
+                                CARD_WIDTH, CARD_HEIGHT);
       displayCards[k].addMouseListener(new MyMouseListener());
       selections[k] = false;
     }
@@ -208,7 +208,7 @@ public class CardGameGUI extends JFrame implements ActionListener
     restartButton.setText("Restart");
     panel.add(restartButton);
     restartButton.setBounds(BUTTON_LEFT, BUTTON_TOP + BUTTON_HEIGHT_INC,
-			    100, 30);
+                            100, 30);
     restartButton.addActionListener(this);
 
     statusMsg = new JLabel(
@@ -233,9 +233,9 @@ public class CardGameGUI extends JFrame implements ActionListener
     lossMsg.setVisible(false);
 
     totalsMsg = new JLabel("You've won " + totalWins
-			   + " out of " + totalGames + " games.");
+                           + " out of " + totalGames + " games.");
     totalsMsg.setBounds(LABEL_LEFT, LABEL_TOP + 2 * LABEL_HEIGHT_INC,
-			250, 30);
+                        250, 30);
     panel.add(totalsMsg);
 
     if (!board.anotherPlayIsPossible()) {
@@ -292,24 +292,24 @@ public class CardGameGUI extends JFrame implements ActionListener
       // Gather all the selected cards.
       List<Integer> selection = new ArrayList<Integer>();
       for (int k = 0; k < board.size(); k++) {
-	if (selections[k]) {
-	  selection.add(new Integer(k));
-	}
+        if (selections[k]) {
+          selection.add(new Integer(k));
+        }
       }
       // Make sure that the selected cards represent a legal replacement.
       if (!board.isLegal(selection)) {
-	signalError();
-	return;
+        signalError();
+        return;
       }
       for (int k = 0; k < board.size(); k++) {
-	selections[k] = false;
+        selections[k] = false;
       }
       // Do the replace.
       board.replaceSelectedCards(selection);
       if (board.isEmpty()) {
-	signalWin();
+        signalWin();
       } else if (!board.anotherPlayIsPossible()) {
-	signalLoss();
+        signalLoss();
       }
       repaint();
     } else if (e.getSource().equals(restartButton)) {
@@ -318,11 +318,11 @@ public class CardGameGUI extends JFrame implements ActionListener
       winMsg.setVisible(false);
       lossMsg.setVisible(false);
       if (!board.anotherPlayIsPossible()) {
-	signalLoss();
-	lossMsg.setVisible(true);
+        signalLoss();
+        lossMsg.setVisible(true);
       }
       for (int i = 0; i < selections.length; i++) {
-	selections[i] = false;
+        selections[i] = false;
       }
       repaint();
     } else {
@@ -365,12 +365,12 @@ public class CardGameGUI extends JFrame implements ActionListener
     public void mouseClicked(MouseEvent e) 
     {
       for (int k = 0; k < board.size(); k++) {
-	if (e.getSource().equals(displayCards[k])
-	    && board.cardAt(k) != null) {
-	  selections[k] = !selections[k];
-	  repaint();
-	  return;
-	}
+        if (e.getSource().equals(displayCards[k])
+            && board.cardAt(k) != null) {
+          selections[k] = !selections[k];
+          repaint();
+          return;
+        }
       }
       signalError();
     }

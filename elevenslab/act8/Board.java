@@ -72,7 +72,7 @@ public abstract class Board
   {
     for (int k = 0; k < cards.length; k++) {
       if (cards[k] != null) {
-	return false;
+        return false;
       }
     }
     return true;
@@ -130,7 +130,7 @@ public abstract class Board
     List<Integer> selected = new ArrayList<Integer>();
     for (int k = 0; k < cards.length; k++) {
       if (cards[k] != null) {
-	selected.add(new Integer(k));
+        selected.add(new Integer(k));
       }
     }
     return selected;
@@ -159,9 +159,9 @@ public abstract class Board
   {
     if (deck.isEmpty()) {
       for (Card c : cards) {
-	if (c != null) {
-	  return false;
-	}
+        if (c != null) {
+          return false;
+        }
       }
       return true;
     }
