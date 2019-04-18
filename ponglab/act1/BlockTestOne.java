@@ -20,8 +20,8 @@ class BlockTestOne
 
     Block four = new Block(450,50,20,60, Color.GREEN);
     out.println(four);
-		
+                
     out.println(one.equals(two));
-    out.println(one.equals(one));		
+    out.println(one.equals(one));               
   }
 }

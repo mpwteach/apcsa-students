@@ -21,19 +21,19 @@ public class Block implements Locatable
   }
 
   //add other Block constructors - x , y , width, height, color
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
   //add the other set methods
    
 
