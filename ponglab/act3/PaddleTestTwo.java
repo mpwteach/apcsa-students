@@ -17,7 +17,7 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
 {
   private Ball ball;
   private Paddle leftPaddle;
-  private boolean[] keys;		//keeps track of what keys are pressed
+  private boolean[] keys;               //keeps track of what keys are pressed
 
   public PaddleTestTwo()
   {
@@ -25,18 +25,18 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
 
 
     //instantiate a Ball
-		
-		
-		
+                
+                
+                
     //instantiate a left Paddle
-		
-		
-		
-		
+                
+                
+                
+                
     //instantiate a right Paddle
-		
-		
-		
+                
+                
+                
 
 
     keys = new boolean[5];
@@ -49,7 +49,7 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
     this.addKeyListener(this);
     new Thread(this).start();
   }
-	
+        
   public void update(Graphics window)
   {
     paint(window);
@@ -117,18 +117,18 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
   {
     //no code needed here
   }
-	
+        
   public void run()
   {
     try
     {
       while(true)
       {
-	Thread.currentThread().sleep(8);
-	repaint();
+        Thread.currentThread().sleep(8);
+        repaint();
       }
     }catch(Exception e)
     {
     }
-  }		
+  }             
 }
