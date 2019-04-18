@@ -22,14 +22,14 @@ class BallTestTwo extends Canvas implements Runnable
 
 
     //test the Ball thoroughly
-		
+                
 
     //test all constructors
 
 
     new Thread(this).start();
   }
-	
+        
   public void update(Graphics window)
   {
     paint(window);
@@ -49,18 +49,18 @@ class BallTestTwo extends Canvas implements Runnable
       ball.setYSpeed(-ball.getYSpeed());
     }
   }
-	
+        
   public void run()
   {
     try
     {
       while(true)
       {
-	Thread.currentThread().sleep(19);
-	repaint();
+        Thread.currentThread().sleep(19);
+        repaint();
       }
     }catch(Exception e)
     {
     }
-  }	
+  }     
 }
