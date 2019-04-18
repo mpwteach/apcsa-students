@@ -34,11 +34,11 @@ public class Pong extends Canvas implements KeyListener, Runnable
     
     setBackground(Color.WHITE);
     setVisible(true);
-		
+                
     new Thread(this).start();
-    addKeyListener(this);		//starts the key thread to log key strokes
+    addKeyListener(this);               //starts the key thread to log key strokes
   }
-	
+        
   public void update(Graphics window){
     paint(window);
   }
@@ -50,7 +50,7 @@ public class Pong extends Canvas implements KeyListener, Runnable
 
     //take a snap shop of the current screen and same it as an image
     //that is the exact same width and height as the current screen
-    if(back==null)
+    if (back==null)
       back = (BufferedImage)(createImage(getWidth(),getHeight()));
 
     //create a graphics reference to the back ground image
@@ -64,26 +64,26 @@ public class Pong extends Canvas implements KeyListener, Runnable
 
 
     //see if ball hits left wall or right wall
-    if(!(ball.getX()>=10 && ball.getX()<=780))
+    if (!(ball.getX()>=10 && ball.getX()<=780))
     {
       ball.setXSpeed(0);
       ball.setYSpeed(0);
     }
 
-		
+                
     //see if the ball hits the top or bottom wall 
 
 
 
 
     //see if the ball hits the left paddle
-		
-		
-		
+                
+                
+                
     //see if the ball hits the right paddle
-		
-		
-		
+                
+                
+                
 
 
     //see if the paddles need to be moved
@@ -102,7 +102,7 @@ public class Pong extends Canvas implements KeyListener, Runnable
 
 
 
-		
+                
     twoDGraph.drawImage(back, null, 0, 0);
   }
 
@@ -129,18 +129,18 @@ public class Pong extends Canvas implements KeyListener, Runnable
   }
 
   public void keyTyped(KeyEvent e){}
-	
+        
   public void run()
   {
     try
     {
       while(true)
       {
-	Thread.currentThread().sleep(8);
-	repaint();
+        Thread.currentThread().sleep(8);
+        repaint();
       }
     }catch(Exception e)
     {
     }
-  }	
+  }     
 }
