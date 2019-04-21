@@ -12,11 +12,11 @@ CLASSES = \
 	SimplePicture.java \
 	DigitalPicture.java \
 	PictureFrame.java \
-	PictureExplorer.java \
 	ImageDisplay.java \
-	ColorChooser.java \
 	FileChooser.java \
-	PictureTester.java
+	PictureTester.java \
+	ColorChooser.java \
+	PictureExplorer.java
 
 default: classes
 
