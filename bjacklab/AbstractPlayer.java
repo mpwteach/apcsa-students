@@ -1,11 +1,9 @@
-//© A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
 //Lab  - 
 
 import java.util.ArrayList;
-import BlackJack.Card;
 
 public abstract class AbstractPlayer implements Playerable
 {
