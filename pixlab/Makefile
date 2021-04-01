@@ -16,7 +16,9 @@ CLASSES = \
 	FileChooser.java \
 	PictureTester.java \
 	ColorChooser.java \
-	PictureExplorer.java
+	PictureExplorer.java \
+	ConsoleInput.java \
+	Main.java
 
 default: classes
 

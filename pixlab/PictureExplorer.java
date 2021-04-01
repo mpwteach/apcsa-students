@@ -800,8 +800,13 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
    */
   public static void main( String args[])
   {
-    Picture pix = new Picture("beach.jpg");
+    // default file to load
+    String file = "beach.jpg";
+    if (args.length != 0)
+      file = args[0];
+    Picture pix = new Picture(file);
     pix.explore();
   }
+   
   
 }
