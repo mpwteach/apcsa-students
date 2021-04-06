@@ -31,12 +31,8 @@ public class Card {
    * @param cardPointValue an <code>int</code> value
    *                  containing the point value of the card
    */
-  public Card(String cardRank, String cardSuit, int cardPointValue) 
-  {
-    //initializes a new Card with the given rank, suit, and point value
-    rank = cardRank;
-    suit = cardSuit;
-    pointValue = cardPointValue;
+  public Card(String cardRank, String cardSuit, int cardPointValue) {
+    /* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
   }
 
 
@@ -44,27 +40,24 @@ public class Card {
    * Accesses this <code>Card's</code> suit.
    * @return this <code>Card's</code> suit.
    */
-  public String suit() 
-  {
-    return suit;
+  public String suit() {
+    /* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
   }
 
   /**
    * Accesses this <code>Card's</code> rank.
    * @return this <code>Card's</code> rank.
    */
-  public String rank() 
-  {
-    return rank;
+  public String rank() {
+    /* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
   }
 
   /**
    * Accesses this <code>Card's</code> point value.
    * @return this <code>Card's</code> point value.
    */
-  public int pointValue() 
-  {
-    return pointValue;
+  public int pointValue() {
+    /* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
   }
 
   /** Compare this card with the argument.
@@ -73,11 +66,8 @@ public class Card {
    *              are equal to those of the argument;
    *         false otherwise.
    */
-  public boolean matches(Card otherCard) 
-  {
-    return otherCard.suit().equals(this.suit())
-      && otherCard.rank().equals(this.rank())
-      && otherCard.pointValue() == this.pointValue();
+  public boolean matches(Card otherCard) {
+    /* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
   }
 
   /**
@@ -91,8 +81,7 @@ public class Card {
    *         and point value of the card.
    */
   @Override
-  public String toString() 
-  {
-    return rank + " of " + suit + " (point value = " + pointValue + ")";
+  public String toString() {
+    /* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
   }
 }
