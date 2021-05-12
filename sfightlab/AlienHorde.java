@@ -18,15 +18,17 @@ public class AlienHorde
   {
   }
 
-  public void drawEmAll( Graphics window )
+  public void draw(Graphics window)
   {
   }
 
-  public void moveEmAll()
+  public void move()
   {
   }
 
-  public void removeDeadOnes(List<Ammo> shots)
+  // calulate if Aliens are hit by shots,
+  // if so remove the shot and alien and return the number of hits
+  public void calcHits(List<Ammo> shots)
   {
   }
 

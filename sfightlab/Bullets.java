@@ -18,16 +18,16 @@ public class Bullets
   {
   }
 
-  //post - draw each Ammo
-  public void drawEmAll( Graphics window )
+  public void draw(Graphics window)
   {
   }
 
-  public void moveEmAll()
+  public void move()
   {
   }
 
-  public void cleanEmUp()
+  // remove any ammo which has reached the edge of the screen
+  public void cleanUpEdges()
   {
   }
 
