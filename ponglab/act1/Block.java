@@ -1,11 +1,7 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name -
-
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Block implements Locatable
+public class Block implements Locateable
 {
   private int xPos;
   private int yPos;

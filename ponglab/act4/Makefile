@@ -6,7 +6,7 @@ JC = javac
 
 CLASSES = \
 	Block.java \
-	Locatable.java \
+	Locateable.java \
 	Ball.java \
 	Paddle.java \
 	Pong.java \

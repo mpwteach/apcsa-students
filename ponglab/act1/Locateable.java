@@ -1,8 +1,4 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name -
-
-public interface Locatable
+public interface Locateable
 {
   public void setPos( int x, int y);
   public void setX( int x );

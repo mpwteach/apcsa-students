@@ -6,7 +6,7 @@ JC = javac
 
 CLASSES = \
 	Block.java \
-	Locatable.java \
+	Locateable.java \
 	BlockTestOne.java \
 	BlockTestTwo.java \
 	Tester.java
